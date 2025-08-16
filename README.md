@@ -48,6 +48,13 @@ Easily edit or remove entries from the spam list.
 
 ---
 
+## 💬 Discussions / Share your spam list
+
+Chat or share your spam list. Join the discussion:  
+👉 [Discussion Thread #1](https://github.com/dbghelp/MCF-Plus/discussions/1)
+
+---
+
 ## 📌 Notes
 - MCF+ is not affiliated with MyCareersFuture.gov.sg.
 - Built to improve productivity and reduce clutter during job searches.
