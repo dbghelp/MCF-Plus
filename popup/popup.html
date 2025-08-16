@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MCF+ Extension</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 16px;
+            min-width: 220px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 40px;
+            height: 22px;
+            display: inline-block;
+        }
+
+        .toggle-switch input {
+            display: none;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #ccc;
+            border-radius: 22px;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 2px;
+            bottom: 2px;
+            background: white;
+            border-radius: 50%;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background: #ff5858;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(18px);
+        }
+
+        .settings-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <span>Enabled</span>
+        <label class="toggle-switch">
+            <input type="checkbox" id="toggleEnable">
+            <span class="slider"></span>
+        </label>
+        <button class="settings-btn" id="settingsBtn" title="Edit spam list">&#9881;</button>
+    </div>
+    <div class="row" style="margin-top:16px;">
+        <span>Remove recommended job</span>
+        <input type="checkbox" id="removeRecommended">
+    </div>
+    <div class="row" style="margin-top:16px;">
+        <span>Show 'Search employees' button</span>
+        <input type="checkbox" id="showSearchEmployees">
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

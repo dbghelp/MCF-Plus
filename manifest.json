@@ -1,0 +1,21 @@
+{
+  "name": "MCF Plus (MCF+)",
+  "description": "MyCareersFuture Plus (MCF+) is a browser extension that enhances the MyCareersFuture job search experience.",
+  "version": "1.0",
+  "manifest_version": 3,
+    "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/MCF.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://www.mycareersfuture.gov.sg/search?*"
+      ]
+    }
+  ]
+}
